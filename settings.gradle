@@ -1,0 +1,3 @@
+rootProject.name = 'spring-examples'
+
+include 'entity-service'
