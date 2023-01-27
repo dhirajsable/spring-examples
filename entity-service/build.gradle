@@ -4,6 +4,7 @@ plugins {
 }
 
 dependencies {
+    implementation(project(':entity-models'))
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
     implementation group: 'org.springframework.security', name: 'spring-security-core'
     implementation 'org.springframework.security:spring-security-web'
