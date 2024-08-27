@@ -1,6 +1,0 @@
-rootProject.name = 'spring-examples'
-
-include 'entity-service'
-include 'entity-common'
-include 'entity-models'
-
