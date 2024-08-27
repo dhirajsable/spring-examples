@@ -1,0 +1,30 @@
+[versions]
+springBoot        = "3.3.2"
+spotless     = "7.0.0.BETA1"
+springManagement     = "1.0.11.RELEASE"
+groovy     = "4.0.19"
+jUnit     = "5.10.2"
+kotlinTest     = "1.9.22"
+mockk     = "1.13.10"
+googlejavaformat     = "1.20.0"
+
+[plugins]
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless"}
+springManagement = { id = "io.spring.dependency-management", version.ref = "springManagement"}
+springBoot = { id = "org.springframework.boot", version.ref = "springBoot"}
+
+[libraries]
+springBootBom = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBoot"}
+groovy = { module = "org.apache.groovy:groovy", version.ref = "groovy"}
+junitJupiterApi = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jUnit"}
+junitJupiterEngine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "jUnit"}
+junitJupiterParams = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "jUnit"}
+kotlintest = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlinTest"}
+mockk = { module = "io.mockk:mockk", version.ref = "mockk"}
+googlejavaformat = { module = "com.google.googlejavaformat:google-java-format", version.ref = "googlejavaformat"}
+springBootStarterWeb = { module = "org.springframework.boot:spring-boot-starter-web"}
+springBootStarterTest = { module = "org.springframework.boot:spring-boot-starter-test"}
+
+[bundles]
+testFrameworkCompiler = ["junitJupiterApi", "junitJupiterParams", "kotlintest", "mockk"]
+testFrameworkRuntime = ["junitJupiterEngine"]
